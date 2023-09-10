@@ -27,8 +27,8 @@ app.get("/", (req, res) => {
     track,
     status_code: 200,
     github_file_url:
-      "https://github/chisomchris/hngx-be-t1/blob/main/server.js",
-    github_repo_url: "https://github/chisomchris/hngx-be-t1",
+      "https://github.com/chisomchris/hngx-be-t1/blob/main/server.js",
+    github_repo_url: "https://github.com/chisomchris/hngx-be-t1",
   });
 });
 
