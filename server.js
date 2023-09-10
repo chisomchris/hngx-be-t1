@@ -24,8 +24,8 @@ app.get("/api", (req, res) => {
   const date = new Date();
   res.status(200).json({
     slack_name,
-    current_date: days[date.getUTCDay()],
-    utc_time: date,
+    current_day: days[date.getUTCDay()],
+    utc_time: date.toISOString().split(".")[0] + "Z",
     track,
     status_code: 200,
     github_file_url:
