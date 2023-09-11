@@ -8,7 +8,11 @@ It can be used to:
 - Update a person's personal information.
 - Delete a person's personal information.
 
+<br>
+
 ## Summary
+
+<br>
 
 | Endpoint | Method | Parameter | Data | Description |
 | ------ | ------ | ------- | ------- | ------ | 
@@ -17,11 +21,15 @@ It can be used to:
 | http://myapiendpoint/api/{name} | GET |  **name** : name of person| | Retrieve person on the database by his/her name|
 | http://myapiendpoint/api/{id} | GET | **id** : id of person || Retrieve the person by **id** |
 | http://myapiendpoint/api/{id} | PUT |  **id** : id of person |**name** : String (optional), **about** : String (optional), **hobbies** : String (optional)   | find person by **id** and update supplied information |
+| http://myapiendpoint/api/{name} | PUT |  **name** : name of person |**name** : String (optional), **about** : String (optional), **hobbies** : String (optional)   | find person by **name** and update supplied information |
 | http://myapiendpoint/api/{id} | DELETE | **id** - id of person || find person by **id** and delete. |
+| http://myapiendpoint/api/{name} | DELETE | **name** - name of person || find person by **name** and delete. |
 
-
+<br>
 
 ## Details
+
+<br>
 
 ### Endpoints
 
@@ -35,18 +43,18 @@ make a `get` request to http://myapiendpoint/api
 
 #### JSON Response
 
-```
+```sh
 {
   "success": true,
   "result": [
                 {
-                    "id": "y982e23gu3287r64387g",
+                    "id": "e982e23e3287a643b87f",
                     "name": "chisomchris",
                     "hobbies": "Loves bowling and hanging out with friends",
                     "about": ""
                 },
                 {
-                    "id": "iuhie4689ry34fbi38y",
+                    "id": "ac82e23e32873a643bed",
                     "name": "mark essien",
                     "hobbies": "Loves bowling and hanging out with friends",
                     "about": "Marketting expert"
@@ -65,11 +73,11 @@ make a `get` request to http://myapiendpoint/api/chisomchris
 
 #### JSON Response
 
-```
+```sh
 {
   "success": true,
   "result": {
-        "id": "y982e23gu3287r64387g",
+        "id": "e982e23e3287a643b87f",
         "name": "chisomchris",
         "hobbies": "",
         "about": "Loves bowling and hanging out with friends"
@@ -83,15 +91,15 @@ Use this endpoint to retreive information of a single persons in the database, p
 
 #### Example usage
 
-make a `get` request to http://myapiendpoint/api/y982e23gu3287r64387g
+make a `get` request to http://myapiendpoint/api/e982e23e3287a643b87f
 
 #### JSON Response
 
-```
+```sh
 {
   "success": true,
   "result": {
-        "id": "y982e23gu3287r64387g",
+        "id": "e982e23e3287a643b87f",
         "name": "chisomchris",
         "hobbies": "",
         "about": "Loves bowling and hanging out with friends"
@@ -107,7 +115,7 @@ Pass the data you want to update in the body, at least one of **name** , **about
 
 #### Example usage
 
-make a `put` request to http://myapiendpoint/api/y982e23gu3287r64387g
+make a `put` request to http://myapiendpoint/api/e982e23e3287a643b87f
 
 #### Request body 
 ```javascript
@@ -119,11 +127,11 @@ make a `put` request to http://myapiendpoint/api/y982e23gu3287r64387g
 ```
 #### JSON Response
 
-```
+```sh
 {
   "success": true,
   "result": {
-        "id": "y982e23gu3287r64387g",
+        "id": "e982e23e3287a643b87f",
         "name": "Chisom Chris",
         "hobbies": "listening to music",
         "about": "chartered accountant, with an MSc"
@@ -137,19 +145,19 @@ Use this endpoint to delete a person from the database, pass in the **id** of th
 
 #### Example usage
 
-make a `delete` request to http://myapiendpoint/api/y982e23gu3287r64387g
+make a `delete` request to http://myapiendpoint/api/e982e23e3287a643b87f
 
 #### JSON Response
 
-```
+```sh
 {
   "success": true,
   "result": {
-        "id": "y982e23gu3287r64387g",
+        "id": "e982e23e3287a643b87f",
         "name": "chisomchris",
         "hobbies": "",
         "about": "Loves bowling and hanging out with friends"
     }
-  }
- ```
+}
+```
  
