@@ -76,7 +76,7 @@ make a `post` request to [baseURL][1]
 {
     "name": "Chisom Chris"
     "about": "chartered accountant, with an MSc",
-    "hobbies": "listening to music"
+    "hobbies": "listening to music, playing tennis"
 }
 ```
 
@@ -85,20 +85,12 @@ make a `post` request to [baseURL][1]
 ```sh
 {
   "success": true,
-  "result": [
-                {
+  "result":    {
                     "id": "e982e23e3287a643b87f",
-                    "name": "chisomchris",
-                    "hobbies": "Loves bowling and hanging out with friends",
+                    "name": "Chisom Chris",
+                    "hobbies": listening to music, playing tennis",
                     "about": ""
-                },
-                {
-                    "id": "ac82e23e32873a643bed",
-                    "name": "mark essien",
-                    "hobbies": "Loves bowling and hanging out with friends",
-                    "about": "Marketting expert"
-                }, ...
-            ]
+                }
   }
  ```
  
