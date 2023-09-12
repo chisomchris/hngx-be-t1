@@ -26,4 +26,10 @@ const isValidId = (value) => {
   return arr1.every((v) => arr.includes(v));
 };
 
-module.exports = { isString, isValidId };
+const sanitize = (val) => {
+  console.log(val);
+  if (!isString(val)) throw new Error("Not a string");
+  return val.replace(/\s+/g, " ").trim();
+};
+
+module.exports = { isString, isValidId, sanitize };

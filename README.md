@@ -69,6 +69,8 @@ You can host the project on any hosting platform of your choice e.g [railway](ht
 
 <br>
 
+The following UML sequence diagrams shows the functional sequence of various activities that can be performed on the API
+
 #### Adding/Creating a new person record
 ![Sequence diagram for creating a new person](public/add.PNG)
 
@@ -85,6 +87,8 @@ You can host the project on any hosting platform of your choice e.g [railway](ht
 <br>
 
 ## Endpoints Summary
+
+`baseURL` = [`https://chisomchris-hngx.onrender.com/api`](https://chisomchris-hngx.onrender.com/api)
 
 <br>
 

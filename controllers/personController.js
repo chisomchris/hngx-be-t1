@@ -1,8 +1,9 @@
+const { toNamespacedPath } = require("path/posix");
 const Person = require("../models/Person");
-const { isString, isValidId } = require("../utils/validate");
+const { isString, isValidId, sanitize } = require("../utils/validate");
 
 const addUser = async (req, res) => {
-  const { name, hobbies, about } = req.body;
+  let { name, hobbies, about } = req.body;
   if (!name) {
     return res.status(400).json({ message: "name is required" });
   }
@@ -11,28 +12,36 @@ const addUser = async (req, res) => {
       .status(400)
       .json({ message: "all feilds are expected to be string." });
   }
+  name = sanitize(name);
   const duplicate = await Person.findOne({ name });
+
   if (duplicate) {
-    return res.status(409).json({ message: "name already taken" });
+    return res.status(409).json({ message: "Name already taken" });
   }
 
   try {
-    if (hobbies) {
+    if (!!hobbies) {
       if (!isString(hobbies)) {
         return res
           .status(400)
           .json({ message: "all feild are expected to be string." });
       }
+      hobbies = sanitize(hobbies);
     }
 
-    if (about) {
+    if (!!about) {
       if (!isString(about)) {
         return res
           .status(400)
           .json({ message: "all feild are expected to be string." });
       }
+      about = sanitize(about);
     }
-    const person = await Person.create({ name, hobbies, about });
+    const person = await Person.create({
+      name,
+      hobbies,
+      about,
+    });
     if (person) {
       const data = JSON.parse(JSON.stringify(person));
       data.id = data._id;
@@ -98,23 +107,23 @@ const updateUser = async (req, res) => {
           .status(400)
           .json({ message: "name is expected to be string." });
       }
-      person.name = name;
+      person.name = sanitize(name);
     }
-    if (hobbies) {
+    if (!!hobbies) {
       if (!isString(hobbies)) {
         return res
           .status(400)
           .json({ message: "hobbies is expected to be string." });
       }
-      person.hobbies = hobbies;
+      person.hobbies = sanitize(hobbies);
     }
-    if (about) {
+    if (!!about) {
       if (!isString(about)) {
         return res
           .status(400)
           .json({ message: "about is expected to be string." });
       }
-      person.about = about;
+      person.about = sanitize(about);
     }
     await person.save();
     const data = JSON.parse(JSON.stringify(person));

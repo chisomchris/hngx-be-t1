@@ -46,6 +46,21 @@ describe("/api", () => {
     expect(res.body.result.hobbies).toBe("Loves HNG");
   });
 
+  it("Should clean up input before saving", async () => {
+    const person = await addToDB({ name: "chisomchris" });
+    const res = await request(app).put(`/api/${person.body.result.id}`).send({
+      hobbies: "   Loves      HNG        ",
+      about: "    Nigerian      born       ",
+    });
+
+    if (person.statusCode == 201) {
+      await cleanDB(person);
+    }
+    expect(res.statusCode).toBe(200);
+    expect(res.body.result.hobbies).toBe("Loves HNG");
+    expect(res.body.result.about).toBe("Nigerian born");
+  });
+
   it("Should Update person data by name", async () => {
     const person = await addToDB({ name: "chisomchris" });
     const res = await request(app)
