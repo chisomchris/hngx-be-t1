@@ -41,7 +41,46 @@ Use this endpoint to retreive all the persons in the data base, no data required
 
 make a `get` request to [baseURL][1]
 
-#### JSON Response
+#### JSON Response - 200 CODE
+
+```sh
+{
+  "success": true,
+  "result": [
+                {
+                    "id": "e982e23e3287a643b87f",
+                    "name": "chisomchris",
+                    "hobbies": "Loves bowling and hanging out with friends",
+                    "about": ""
+                },
+                {
+                    "id": "ac82e23e32873a643bed",
+                    "name": "mark essien",
+                    "hobbies": "Loves bowling and hanging out with friends",
+                    "about": "Marketting expert"
+                }, ...
+            ]
+  }
+ ```
+ 
+####  [baseURL][1] - POST
+
+Use this endpoint to add new person to the data base, Pass the data you want to update in the body,  **name** attribute is required and all field values must be a string.
+
+#### Example usage
+
+make a `post` request to [baseURL][1]
+
+#### Request body 
+```javascript
+{
+    "name": "Chisom Chris"
+    "about": "chartered accountant, with an MSc",
+    "hobbies": "listening to music"
+}
+```
+
+#### JSON Response - 201 CODE
 
 ```sh
 {
@@ -71,7 +110,7 @@ Use this endpoint to retreive information of a single persons in the database, p
 
 make a `get` request to [baseURL/][1]chisomchris
 
-#### JSON Response
+#### JSON Response - 200 CODE
 
 ```sh
 {
@@ -93,7 +132,7 @@ Use this endpoint to retreive information of a single persons in the database, p
 
 make a `get` request to [baseURL/][1]e982e23e3287a643b87f
 
-#### JSON Response
+#### JSON Response - 200 CODE
 
 ```sh
 {
@@ -125,7 +164,7 @@ make a `put` request to [baseURL/][1]e982e23e3287a643b87f
     "hobbies": "listening to music"
 }
 ```
-#### JSON Response
+#### JSON Response - 200 CODE
 
 ```sh
 {
@@ -147,7 +186,7 @@ Use this endpoint to delete a person from the database, pass in the **id** of th
 
 make a `delete` request to [baseURL/][1]e982e23e3287a643b87f
 
-#### JSON Response
+#### JSON Response - 200 CODE
 
 ```sh
 {
