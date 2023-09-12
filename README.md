@@ -137,13 +137,13 @@ make a `get` request to [baseURL][1]
   }
  ```
  
-#### [baseURL][1]{name} -  GET 
+#### [baseURL/][1]{name} -  GET 
 
 Use this endpoint to retreive information of a single persons in the database, pass in the **name** of the person in the URI. No data required in the body.
 
 #### Example usage
 
-make a `get` request to [baseURL][1]chisomchris
+make a `get` request to [baseURL/][1]chisomchris
 
 #### JSON Response
 
@@ -159,13 +159,13 @@ make a `get` request to [baseURL][1]chisomchris
   }
  ```
  
-#### [baseURL][1]{id} -  GET 
+#### [baseURL/][1]{id} -  GET 
 
 Use this endpoint to retreive information of a single persons in the database, pass in the **id** of the person in the URI. No data required in the body.
 
 #### Example usage
 
-make a `get` request to [baseURL][1]e982e23e3287a643b87f
+make a `get` request to [baseURL/][1]e982e23e3287a643b87f
 
 #### JSON Response
 
@@ -181,7 +181,7 @@ make a `get` request to [baseURL][1]e982e23e3287a643b87f
   }
  ```
 
-#### [baseURL][1]{id} -  PUT 
+#### [baseURL/][1]{id} -  PUT 
 
 Use this endpoint to update information of a single persons in the database, pass in the **id** of the person in the URI.
 
@@ -189,7 +189,7 @@ Pass the data you want to update in the body, at least one of **name** , **about
 
 #### Example usage
 
-make a `put` request to [baseURL][1]e982e23e3287a643b87f
+make a `put` request to [baseURL/][1]e982e23e3287a643b87f
 
 #### Request body 
 ```javascript
@@ -213,13 +213,13 @@ make a `put` request to [baseURL][1]e982e23e3287a643b87f
 }
  ```
  
-#### [baseURL][1]{id} -  DELETE 
+#### [baseURL/][1]{id} -  DELETE 
 
 Use this endpoint to delete a person from the database, pass in the **id** of the person in the URI.
 
 #### Example usage
 
-make a `delete` request to [baseURL][1]e982e23e3287a643b87f
+make a `delete` request to [baseURL/][1]e982e23e3287a643b87f
 
 #### JSON Response
 
