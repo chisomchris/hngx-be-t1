@@ -72,8 +72,12 @@ You can host the project on any hosting platform of your choice e.g [railway](ht
 #### Adding/Creating a new person record
 ![Sequence diagram for creating a new person](public/add.PNG)
 
+<br>
+
 #### Reading a person/persons record
 ![Sequence diagram for getting person information](public/get.PNG)
+
+<br>
 
 #### Updating/Deleting a person record
 ![Sequence diagram for updating and deleting a person](public/del.PNG)
