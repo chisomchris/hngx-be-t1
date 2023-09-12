@@ -1,4 +1,4 @@
-const Person = require("../models/person");
+const Person = require("../models/Person");
 const { isString, isValidId } = require("../utils/validate");
 
 const addUser = async (req, res) => {
