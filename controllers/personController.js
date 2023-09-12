@@ -181,12 +181,12 @@ const getUser = async (req, res) => {
 
 const getUsers = async (req, res) => {
   try {
-    const persons = await Person.find({}).select("-__v").exec();
+    let persons = await Person.find({}).select("-__v").exec();
     if (!persons) {
       return res.sendStatus(500);
     }
     if (persons.length > 0) {
-      persons.map((person) => {
+      persons = persons.map((person) => {
         const data = JSON.parse(JSON.stringify(person));
         data.id = data._id;
         delete data._id;
