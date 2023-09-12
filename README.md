@@ -70,13 +70,13 @@ You can host the project on any hosting platform of your choice e.g [railway](ht
 <br>
 
 #### Adding/Creating a new person record
-![Sequence diagram for creating a new person](https://chisomchris-hngx.onrender.com/add.JPG)
+![Sequence diagram for creating a new person](public/add.PNG)
 
 #### Reading a person/persons record
-![Sequence diagram for getting person information](https://chisomchris-hngx.onrender.com/get.JPG)
+![Sequence diagram for getting person information](public/get.PNG)
 
 #### Updating/Deleting a person record
-![Sequence diagram for updating and deleting a person](https://chisomchris-hngx.onrender.com/del.JPG)
+![Sequence diagram for updating and deleting a person](public/del.PNG)
 
 <br>
 
